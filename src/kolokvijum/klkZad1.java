@@ -43,7 +43,7 @@ import mars.random.RNG;
 public class klkZad1 implements Drawing {
 
 	@GadgetColorPicker
-	Color colorPicker = Color.gray(0.125);
+	Color colorPicker = Color.CORNFLOWERBLUE;
 
 	
 	@GadgetDouble(min=0, max = 1)
@@ -56,13 +56,11 @@ public class klkZad1 implements Drawing {
 	public void draw(View view) {
 		DrawingUtils.clear(view, Color.WHITE);
 		Image slika = new Image("images/fall.jpg");
-        //Image originalImage = new Image("images/" + fileNames[imageIndex]);
-        //Image filteredImage = filter.process(originalImage);
+        
 		view.drawImageCentered(Vector.ZERO, applyFilter ? image(slika) : slika);
 		
 	}
 	public Image image(Image inputImage) {
-		// Linearni gradijent crvene po x-osi i zelene po y-osi.
         final int w = (int) inputImage.getWidth();
 		final int h = (int) inputImage.getHeight();
 		WritableImage image = new WritableImage(w, h);
