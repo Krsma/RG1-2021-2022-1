@@ -52,13 +52,11 @@ public class zadatak1 implements Drawing {
 
     @GadgetAnimation
     double time = 0.0;
-
+    // kod delimicno kopiran sa vezbi
     double dt0 = 2.0; // Trajanje stanja 0 - Podizanje poklopca
     double dt1 = 2.0; // Trajanje stanja 1 - Ubacivanje lopte
     double dt2 = 3.0; // Trajanje stanja 2 - Spustanje poklopca
 
-    // Vremena keyfremova (trenutke prelaza izmedju stanja) racunamo sabiranjem
-    // trajanja stanja
 
     double time0 = 0.0; // Vreme pocetka stanja 0
     double time1 = time0 + dt0; // Vreme kraja stanja 0 = Vreme pocetka stanja 1
@@ -100,9 +98,9 @@ public class zadatak1 implements Drawing {
         if (time < time0)
             return 0;
         // if (time < time1)
-        // return smoothStep((time - time0) / dt0);
+        return smoothStep((time - time0) / dt0);
 
-        return time;
+        //return time;
     }
 
     double tShaft(double time) {
@@ -145,8 +143,8 @@ public class zadatak1 implements Drawing {
         view.setLineJoin(StrokeLineJoin.ROUND);
         view.setLineWidth(4);
 
-        view.setFill(Color.hsb(120, 0.5, 0.6));
-        view.setStroke(Color.hsb(120, 0.5, 1.0));
+        view.setFill(Color.hsb(0, 0.5, 0.6));
+        view.setStroke(Color.hsb(0, 0.5, 1.0));
 
         Vector hinge1u = new Vector(l, l);
         Vector hinge1d = new Vector(l, -l);
@@ -180,8 +178,8 @@ public class zadatak1 implements Drawing {
         view.setLineJoin(StrokeLineJoin.ROUND);
         view.setLineWidth(4);
 
-        view.setFill(Color.hsb(60, 0.5, 0.6));
-        view.setStroke(Color.hsb(120, 0.5, 1.0));
+        view.setFill(Color.hsb(240, 0.5, 0.6));
+        view.setStroke(Color.hsb(240, 0.5, 1.0));
 
         Vector hinge1r = new Vector(l, l);
         Vector hinge2r = new Vector(l, -l);
