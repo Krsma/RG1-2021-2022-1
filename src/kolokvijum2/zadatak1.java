@@ -84,10 +84,10 @@ public class zadatak1 implements Drawing {
     }
 
     double bounceOutNormalized(double x) {
-        if (x < time3) {
+        if (x < time2) {
             return 0;
         }
-        double vrednost = bounceOut(x - time3);
+        double vrednost = bounceOut(x - time2);
         // vrednost = (vrednost))
         return vrednost > 1 ? 1 : vrednost;
     }
